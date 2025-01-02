@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: explicit-ks-secret
+  namespace: default
 type: Opaque
 data:
   jeff_existing_username: ${gotk_junk}
@@ -11,6 +12,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx-deployment
+  namespace: default
   labels:
     app: nginx
 spec:
@@ -25,6 +27,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: default
   labels:
     app: nginx
 spec:
