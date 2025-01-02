@@ -6,7 +6,7 @@ metadata:
   namespace: default
 type: Opaque
 stringData:
-  jeff_existing_username: ${gotk_junk}
+  value_set_by_ks: ${gotk_junk}
 ---
 kind: Service
 apiVersion: v1
@@ -68,7 +68,7 @@ spec:
           valueFrom: 
             secretKeyRef: 
               name: explicit-ks-secret
-              key: jeff-existing-username 
+              key: value_set_by_ks
         - name: SM_ENV_CLUSTER_TYPE
           valueFrom: 
             secretKeyRef: 
