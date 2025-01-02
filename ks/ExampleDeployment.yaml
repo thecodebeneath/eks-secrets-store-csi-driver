@@ -5,7 +5,7 @@ metadata:
   name: explicit-ks-secret
   namespace: default
 type: Opaque
-data:
+stringData:
   jeff_existing_username: ${gotk_junk}
 ---
 kind: Service
