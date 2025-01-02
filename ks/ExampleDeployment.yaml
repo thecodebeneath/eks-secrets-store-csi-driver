@@ -64,10 +64,10 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         env: 
-        - name: EXISTING_SECRET_ENV 
+        - name: EXPLICIT_KS_SECRET_ENV 
           valueFrom: 
             secretKeyRef: 
-              name: existing-secret
+              name: explicit-ks-secret
               key: jeff-existing-username 
         - name: SM_ENV_CLUSTER_TYPE
           valueFrom: 
