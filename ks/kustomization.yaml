@@ -1,5 +1,5 @@
 ---
 resources:
 - gotk.yaml
-- ExampleSecretProviderClass.yaml
-- ExampleDeployment.yaml
+# - ExampleSecretProviderClass.yaml
+# - ExampleDeployment.yaml
