@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: gotk-secret
+  namespace: default
 type: Opaque
 data:
   gotk_junk: dmFsdWUtMg==
