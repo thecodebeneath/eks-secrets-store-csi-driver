@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: explicit-ks-secret
-  type: Opaque
+type: Opaque
 data:
   jeff-existing-username: ${gotk-junk}
 ---
