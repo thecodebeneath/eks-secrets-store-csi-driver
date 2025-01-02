@@ -5,7 +5,7 @@ metadata:
   name: gotk-secret
 type: Opaque
 data:
-  gotk-junk: dmFsdWUtMg==
+  gotk_junk: dmFsdWUtMg==
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
@@ -34,4 +34,4 @@ spec:
   postBuild:
     substituteFrom:
       - kind: Secret
-        name: gotk-secret
+        name: gotk_secret

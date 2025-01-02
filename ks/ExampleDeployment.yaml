@@ -5,7 +5,7 @@ metadata:
   name: explicit-ks-secret
 type: Opaque
 data:
-  jeff-existing-username: ${gotk-junk}
+  jeff_existing_username: ${gotk_junk}
 ---
 kind: Service
 apiVersion: v1
