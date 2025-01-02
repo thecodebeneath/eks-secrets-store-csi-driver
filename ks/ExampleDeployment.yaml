@@ -64,17 +64,17 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         env: 
-        - name: EXPLICIT_KS_SECRET_ENV 
+        - name: EXPLICIT_KS_SECRET_ENV
           valueFrom: 
             secretKeyRef: 
               name: explicit-ks-secret
               key: value_set_by_ks
-        - name: SM_ENV_CLUSTER_TYPE
+        - name: DYNAMIC_SM_CLUSTER_TYPE
           valueFrom: 
             secretKeyRef: 
               name: environment-vars
               key: CLUSTER_TYPE 
-        - name: SM_ENV_KC_ARGOCD_CLIENT_SECRET
+        - name: DYNAMIC_SM_KC_ARGOCD_CLIENT_SECRET
           valueFrom: 
             secretKeyRef: 
               name: environment-vars
