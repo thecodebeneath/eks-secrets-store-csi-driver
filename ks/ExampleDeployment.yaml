@@ -8,6 +8,15 @@ type: Opaque
 stringData:
   value_set_by_ks: ${gotk_junk}
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dynamic-sm-ks-secret
+  namespace: default
+type: Opaque
+stringData:
+  value_set_by_ks: ${CLUSTER_TYPE}
+---
 kind: Service
 apiVersion: v1
 metadata:
