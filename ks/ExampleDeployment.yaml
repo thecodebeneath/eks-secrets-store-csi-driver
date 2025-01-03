@@ -42,12 +42,12 @@ spec:
     spec:
       serviceAccountName: nginx-deployment-sa
       volumes:
-      - name: secrets-store-inline
-        csi:
-          driver: secrets-store.csi.k8s.io
-          readOnly: true
-          volumeAttributes:
-            secretProviderClass: "nginx-deployment-aws-secrets"
+      # - name: secrets-store-inline
+      #   csi:
+      #     driver: secrets-store.csi.k8s.io
+      #     readOnly: true
+      #     volumeAttributes:
+      #       secretProviderClass: "nginx-deployment-aws-secrets"
       - name: explicit-ks-secret-volume
         secret:
           secretName: explicit-ks-secret
@@ -80,9 +80,9 @@ spec:
               name: environment-vars
               key: KC_ARGOCD_CLIENT_SECRET
         volumeMounts:
-        - name: secrets-store-inline
-          mountPath: "/mnt/secrets-store"
-          readOnly: true
+        # - name: secrets-store-inline
+        #   mountPath: "/mnt/secrets-store"
+        #   readOnly: true
         - name: explicit-ks-secret-volume
           mountPath: "/etc/explicit-ks-secret-volume"
           readOnly: true
