@@ -72,12 +72,12 @@ spec:
         - name: DYNAMIC_SM_CLUSTER_TYPE
           valueFrom: 
             secretKeyRef: 
-              name: environment-vars
+              name: from-sm-environment-vars
               key: CLUSTER_TYPE 
         - name: DYNAMIC_SM_KC_ARGOCD_CLIENT_SECRET
           valueFrom: 
             secretKeyRef: 
-              name: environment-vars
+              name: from-sm-environment-vars
               key: KC_ARGOCD_CLIENT_SECRET
         volumeMounts:
         # - name: secrets-store-inline

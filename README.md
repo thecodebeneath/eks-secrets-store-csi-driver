@@ -55,10 +55,14 @@ kubectl exec -it $(kubectl get pods | awk '/nginx-deployment/{print $1}' | head 
 ```
 
 ### ENV Vars
-`env | grep -e DYNAMIC -e EXPLICIT`
+1. `env | grep -e DYNAMIC -e EXPLICIT`
    - EXPLICIT_KS_SECRET_ENV=value-2
    - DYNAMIC_SM_CLUSTER_TYPE=jeff-common
    - DYNAMIC_SM_KC_ARGOCD_CLIENT_SECRET=FGJHWHw==
+
+2. `kubectl get secret from-sm-private-git-server`
+
+3. `kubectl get secret from-sm-environment-vars`
 
 ### Volumes
 1. Confirm Kustomization worked for a single value substitution
