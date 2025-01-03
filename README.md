@@ -35,6 +35,15 @@ eksctl create iamserviceaccount --name nginx-deployment-sa --region="$REGION" --
 eksctl utils associate-iam-oidc-provider --region="$REGION" --cluster="$CLUSTERNAME" --approve
 ```
 
+## Create Secrets Manager entry
+Create "Other" type secret, named: "proj/jeff/ProjApps", with four key/value pairs.
+```
+CLUSTER_TYPE: jeff-common
+REGISTRY_USER: jeffadmin
+REGISTRY_PASSWORD: jeffpassword!
+KC_ARGOCD_CLIENT_SECRET: FGJHWHw==
+```
+
 ## Deploy and Apply Kustomization
 ```
 kubectl apply -f ks/gotk.yaml
